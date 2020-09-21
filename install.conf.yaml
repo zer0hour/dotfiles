@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.vim:
+    ~/.vimrc:
+      relink: true
+    ~/config/i3/config: i3.config      
+
+- create:
+    - ~/Downloads
+    - ~/.vim/undo-history
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
