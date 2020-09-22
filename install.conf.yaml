@@ -4,6 +4,12 @@
 
 - clean: ['~']
 
+- create:
+    - ~/Downloads
+    - ~/.vim/undo-history
+    - ~/.local/share/mc/skins 
+    - ~/Photos/Desktop
+
 - link:
     ~/.vimrc:
       relink: true
@@ -12,11 +18,7 @@
       relink: true
     ~/.p10k.zsh: p10kzsh
     ~/.local/share/mc/skins/gruvbox256.ini: mcgruvbox256
-
-- create:
-    - ~/Downloads
-    - ~/.vim/undo-history
-    - ~/.local/share/mc/skins 
+    ~/.profile:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
