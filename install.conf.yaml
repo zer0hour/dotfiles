@@ -11,10 +11,12 @@
     ~/.zshrc:
       relink: true
     ~/.p10k.zsh: p10kzsh
+    ~/.local/share/mc/skins/gruvbox256.ini: mcgruvbox256
 
 - create:
     - ~/Downloads
     - ~/.vim/undo-history
+    - ~/.local/share/mc/skins 
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
