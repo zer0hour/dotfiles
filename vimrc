@@ -88,7 +88,7 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=79 | 
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
@@ -126,3 +126,6 @@ autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellesca
 
 " NERDTreeToggle
 map <C-n> :NERDTreeToggle<CR>
+
+" change Python linebreaks
+autocmd BufWritepre *.py %s/\s\+$//e
