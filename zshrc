@@ -109,3 +109,14 @@ export MANPATH="/usr/local/man:$MANPATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 PS1='%m %1d$ '
+
+# what to add to path
+NPATH="$HOME/Python/Scripts"
+
+# add it only if required
+case ":${PATH}:" in
+  *:${NPATH}:*) ;;
+  *) PATH=${PATH}:$NPATH ;;
+esac
+
+export PATH
