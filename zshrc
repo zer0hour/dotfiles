@@ -105,6 +105,12 @@ export MANPATH="/usr/local/man:$MANPATH"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Functions
+
+youtube () {
+	mplayer -really-quiet -vo caca -cookies-file /tmp/cook.txt $(youtube-dl -g --cookies /tmp/cook.txt "https://www.youtube.com/watch?v=$1")
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
